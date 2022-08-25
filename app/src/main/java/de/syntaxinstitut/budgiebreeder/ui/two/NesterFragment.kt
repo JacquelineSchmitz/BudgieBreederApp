@@ -13,7 +13,7 @@ import de.syntaxinstitut.budgiebreeder.databinding.FragmentTwoBinding
 /**
  * Fragment 2
  */
-class TwoFragment : Fragment(R.layout.fragment_two) {
+class NesterFragment : Fragment(R.layout.fragment_nester) {
 
     /* -------------------- Klassen Variablen -------------------- */
 
@@ -21,7 +21,7 @@ class TwoFragment : Fragment(R.layout.fragment_two) {
     private lateinit var binding: FragmentTwoBinding
 
     /** Das ViewModel zu diesem Fragment */
-    private val viewModel: TwoViewModel by viewModels()
+    private val viewModel: NesterViewModel by viewModels()
 
     /* -------------------- Lifecycle -------------------- */
     /**
@@ -36,7 +36,7 @@ class TwoFragment : Fragment(R.layout.fragment_two) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_two, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_nester, container, false)
 
         return binding.root
     }

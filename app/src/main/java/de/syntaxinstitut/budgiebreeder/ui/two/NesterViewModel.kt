@@ -6,5 +6,5 @@ import androidx.lifecycle.AndroidViewModel
 /**
  * Das ViewModel des One Fragments
  */
-class TwoViewModel(application: Application) : AndroidViewModel(application) {
+class NesterViewModel(application: Application) : AndroidViewModel(application) {
 }

@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/twoFragment"
-        android:name="de.syntaxinstitut.budgiebreeder.ui.two.TwoFragment"
+        android:name="de.syntaxinstitut.budgiebreeder.ui.two.NesterFragment"
         android:label="TwoFragment"
-        tools:layout="@layout/fragment_two"/>
+        tools:layout="@layout/fragment_nester"/>
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="de.syntaxinstitut.budgiebreeder.ui.splashScreen.SplashScreenFragment"
