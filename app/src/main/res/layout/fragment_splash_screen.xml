@@ -12,15 +12,34 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/png_transparent_desktop_feather_graphy_falling_feathers_animals_monochrome_digital_media_thumbnail_1" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/activitymain_startscreen" />
+            app:srcCompat="@drawable/text" />
 
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="299dp"
+            android:layout_height="294dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_splash_screen" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import de.syntaxinstitut.budgiebreeder.R
+import de.syntaxinstitut.budgiebreeder.databinding.FragmentNesterBinding
 import de.syntaxinstitut.budgiebreeder.databinding.FragmentTwoBinding
 
 /**
@@ -18,7 +19,7 @@ class NesterFragment : Fragment(R.layout.fragment_nester) {
     /* -------------------- Klassen Variablen -------------------- */
 
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
-    private lateinit var binding: FragmentTwoBinding
+    private lateinit var binding: FragmentNesterBinding
 
     /** Das ViewModel zu diesem Fragment */
     private val viewModel: NesterViewModel by viewModels()
