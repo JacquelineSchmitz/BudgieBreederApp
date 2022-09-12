@@ -13,24 +13,10 @@
 
 
         <Button
-            android:id="@+id/btn_fragment_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:bottomLeftRadius="30dp"
-            android:bottomRightRadius="30dp"
-            android:text="Weiter zu Fragment 2"
-            android:textColor="@color/black"
-            android:textStyle="normal"
-            android:topLeftRadius="30dp"
-            android:topRightRadius="30dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <Button
             android:id="@+id/btn_nest_fragment_one"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="96dp"
             android:bottomLeftRadius="30dp"
             android:bottomRightRadius="30dp"
             android:text="Nester"
@@ -40,20 +26,19 @@
             android:topLeftRadius="30dp"
             android:topRightRadius="30dp"
             app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@+id/title_homescreen"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintStart_toStartOf="@+id/title_homescreen"
+            app:layout_constraintTop_toBottomOf="@+id/title_homescreen" />
 
         <Button
-            android:id="@+id/btn_neuesnest_fragment_one"
+            android:id="@+id/btn_fotos_fragment_one"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Neues Nest"
+            android:layout_marginTop="40dp"
+            android:text="Fotos"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="normal"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="@+id/btn_nest_fragment_one"
             app:layout_constraintHorizontal_bias="0.0"
@@ -61,76 +46,51 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_nest_fragment_one" />
 
         <Button
-            android:id="@+id/btn_fotos_fragment_one"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Fotos"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/btn_neuesnest_fragment_one"
-            app:layout_constraintStart_toStartOf="@+id/btn_neuesnest_fragment_one"
-            app:layout_constraintTop_toBottomOf="@+id/btn_neuesnest_fragment_one" />
-
-        <Button
             android:id="@+id/btn_flirtbox_fragment_one"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:text="FlirtBox"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="@+id/btn_fotos_fragment_one"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btn_fotos_fragment_one"
             app:layout_constraintTop_toBottomOf="@+id/btn_fotos_fragment_one" />
 
-        <Button
-            android:id="@+id/btn_wetter_fragment_one"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Wetter"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/btn_flirtbox_fragment_one"
-            app:layout_constraintStart_toStartOf="@+id/btn_flirtbox_fragment_one"
-            app:layout_constraintTop_toBottomOf="@+id/btn_flirtbox_fragment_one" />
-
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/background_fragment_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/splash_screen" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/title_homescreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/wellensittich_gesellschaft_2_1024x683_1" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:srcCompat="@drawable/title" />
+            app:srcCompat="@drawable/title"
+            tools:layout_editor_absoluteY="277dp" />
+
+        <ImageView
+            android:id="@+id/imageViewWelliHomescreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-130dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/welliHomescreeen" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

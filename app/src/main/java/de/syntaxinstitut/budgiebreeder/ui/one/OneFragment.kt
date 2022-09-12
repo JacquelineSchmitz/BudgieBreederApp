@@ -54,9 +54,9 @@ class OneFragment : Fragment(R.layout.fragment_one) {
 
         /* -------------------- UI-Interaktionen -------------------- */
 
-        binding.btnFragmentOne.setOnClickListener {
-            viewModel.navigateToFragmentTwo()
-        }
+       binding.btnNestFragmentOne.setOnClickListener {
+           viewModel.navigateToFragmentTwo()
+       }
 
         /* -------------------- Observer -------------------- */
 
