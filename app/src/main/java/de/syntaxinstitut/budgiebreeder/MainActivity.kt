@@ -1,9 +1,11 @@
 package de.syntaxinstitut.budgiebreeder
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import de.syntaxinstitut.budgiebreeder.databinding.ActivityMainBinding
+import kotlin.system.exitProcess
 
 
 /**
@@ -29,4 +31,10 @@ class MainActivity : AppCompatActivity() {
         // Das Binding zur XML-Datei
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
     }
+    fun quitApp(view: View) {
+        this@MainActivity.finish()
+        exitProcess(0)
+    }
 }
+
+//MainActivity().quitApp(view)

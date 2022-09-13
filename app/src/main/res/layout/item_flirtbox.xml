@@ -9,7 +9,7 @@
         android:layout_width="370dp"
         android:layout_height="100dp"
         android:layout_marginTop="65dp"
-        app:cardBackgroundColor="@color/hellRosaCard"
+        app:cardBackgroundColor="#F4B9B8"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"

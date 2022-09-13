@@ -28,10 +28,12 @@
             android:id="@+id/btn_nest1_fragment_nester"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="350dp"
+            android:backgroundTint="#FFF4BD"
             android:text="Nest 1"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,9 +44,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:backgroundTint="#F4B9B8"
             android:text="Nest 2"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="@+id/btn_nest1_fragment_nester"
             app:layout_constraintStart_toStartOf="@+id/btn_nest1_fragment_nester"
             app:layout_constraintTop_toBottomOf="@+id/btn_nest1_fragment_nester" />
@@ -54,9 +58,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:backgroundTint="#85D2D0"
             android:text="Nest 3"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="@+id/btn_nest2_fragment_nester"
             app:layout_constraintStart_toStartOf="@+id/btn_nest2_fragment_nester"
             app:layout_constraintTop_toBottomOf="@+id/btn_nest2_fragment_nester" />
@@ -66,35 +72,213 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:backgroundTint="#887BB0"
             android:text="Nest 4"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="@+id/btn_nester3_fragment_nester"
             app:layout_constraintStart_toStartOf="@+id/btn_nester3_fragment_nester"
             app:layout_constraintTop_toBottomOf="@+id/btn_nester3_fragment_nester" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="@+id/background_nester"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_nest4_fragment_nester"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/welli_image_nester"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-150dp"
+            android:layout_marginTop="-100dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/wellis" />
+
+        <ImageView
+            android:id="@+id/icon_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nest1_fragment_nester"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nest1_fragment_nester"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toStartOf="@+id/btn_nest1_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nest1_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+        <ImageView
+            android:id="@+id/icon_bearbeiten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nest1_fragment_nester"
+            app:layout_constraintEnd_toStartOf="@+id/icon_delete"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="@+id/btn_nest1_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nest1_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/icon_delete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nest2_fragment_nester"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nest2_fragment_nester"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toStartOf="@+id/btn_nest2_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nest2_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+        <ImageView
+            android:id="@+id/icon_bearbeiten2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nest2_fragment_nester"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nest2_fragment_nester"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="@+id/btn_nest2_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nest2_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/icon_delete3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nester3_fragment_nester"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nester3_fragment_nester"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toStartOf="@+id/btn_nester3_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nester3_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+        <ImageView
+            android:id="@+id/icon_bearbeiten3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nester3_fragment_nester"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nester3_fragment_nester"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="@+id/btn_nester3_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nester3_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/icon_delete4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nest4_fragment_nester"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nest4_fragment_nester"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toStartOf="@+id/btn_nest4_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nest4_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+        <ImageView
+            android:id="@+id/icon_bearbeiten4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_nest4_fragment_nester"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nest4_fragment_nester"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="@+id/btn_nest4_fragment_nester"
+            app:layout_constraintTop_toTopOf="@+id/btn_nest4_fragment_nester"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="205dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/Nester" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="88dp"
+            android:layout_height="134dp"
+            android:rotation="194"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.405"
+            app:srcCompat="@drawable/feder" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="139dp"
+            android:layout_height="154dp"
+            android:rotation="221"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/feder" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="204dp"
+            android:layout_marginTop="480dp"
+            app:layout_constraintStart_toStartOf="@+id/background_nester"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/feder" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="57dp"
+            android:layout_height="72dp"
+            android:rotation="-167"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.392"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background_nester"
+            app:layout_constraintVertical_bias="0.44"
+            app:srcCompat="@drawable/feder" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="331dp"
+            android:layout_height="253dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginBottom="512dp"
+            android:rotation="181"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/png_transparent_desktop_feather_graphy_falling_feathers_animals_monochrome_digital_media_thumbnail_1" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="86dp"
+            android:layout_height="69dp"
+            android:rotation="181"
+            android:rotationX="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.178"
+            app:srcCompat="@drawable/feder" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
