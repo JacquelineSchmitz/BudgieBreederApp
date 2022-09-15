@@ -204,7 +204,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/Nester" />
+            app:srcCompat="@drawable/nester" />
 
         <ImageView
             android:id="@+id/imageView13"

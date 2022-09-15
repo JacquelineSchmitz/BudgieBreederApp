@@ -22,20 +22,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/nestpic" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="213dp"
             android:layout_height="53dp"
             android:layout_marginStart="-50dp"
-            android:src="@drawable/Nest"
+            android:layout_marginTop="-120dp"
             app:layout_constraintBottom_toTopOf="@+id/cardView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.004"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.683" />
+            app:layout_constraintVertical_bias="0.683"
+            app:srcCompat="@drawable/nest" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"

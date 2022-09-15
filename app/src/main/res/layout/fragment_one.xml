@@ -16,21 +16,21 @@
             android:id="@+id/btn_nest_fragment_one"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#F4B9B8"
             android:bottomLeftRadius="30dp"
             android:bottomRightRadius="30dp"
             android:text="Nester"
             android:textColor="@color/black"
-            android:backgroundTint="#F4B9B8"
             android:textSize="16sp"
             android:textStyle="normal"
             android:topLeftRadius="30dp"
             android:topRightRadius="30dp"
             app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewbbschrift"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewWelliHomescreen" />
+            app:layout_constraintStart_toStartOf="@+id/imageViewbbschrift"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewwellifoto" />
 
         <Button
             android:id="@+id/btn_fotos_fragment_one"
@@ -76,17 +76,7 @@
             app:srcCompat="@drawable/backgroundfeder" />
 
         <ImageView
-            android:id="@+id/imageViewWelliHomescreen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-130dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/welliHomescreeen" />
-
-        <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageViewbbschrift"
             android:layout_width="279dp"
             android:layout_height="130dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +85,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.39"
-            app:srcCompat="@drawable/TextbudgieB" />
+            app:srcCompat="@drawable/textbudgieb" />
+
+        <ImageView
+            android:id="@+id/imageViewwellifoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wellihomescreeen" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package de.syntaxinstitut.budgiebreeder.ui.one
+package de.syntaxinstitut.budgiebreeder.ui.home
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

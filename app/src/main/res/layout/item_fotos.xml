@@ -29,7 +29,7 @@
                 android:layout_width="157dp"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                tools:srcCompat="@drawable/lemonCherry" />
+                tools:srcCompat="@drawable/lemoncherry" />
         </androidx.cardview.widget.CardView>
 
 

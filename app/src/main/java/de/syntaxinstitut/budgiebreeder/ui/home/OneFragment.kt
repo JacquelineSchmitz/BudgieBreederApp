@@ -1,4 +1,4 @@
-package de.syntaxinstitut.budgiebreeder.ui.one
+package de.syntaxinstitut.budgiebreeder.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

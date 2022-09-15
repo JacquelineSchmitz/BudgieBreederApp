@@ -35,11 +35,10 @@
         android:layout_width="327dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
-        android:tint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/FlirtBox" />
+        app:srcCompat="@drawable/flirtbox" />
 
     <ImageView
         android:id="@+id/imageViewflirtbox_federn"

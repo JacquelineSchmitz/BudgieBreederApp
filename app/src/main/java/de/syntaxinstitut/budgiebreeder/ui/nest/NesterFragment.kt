@@ -1,4 +1,4 @@
-package de.syntaxinstitut.budgiebreeder.ui.two
+package de.syntaxinstitut.budgiebreeder.ui.nest
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import de.syntaxinstitut.budgiebreeder.R
 import de.syntaxinstitut.budgiebreeder.databinding.FragmentNesterBinding
-import de.syntaxinstitut.budgiebreeder.databinding.FragmentTwoBinding
+
 
 /**
  * Fragment 2
