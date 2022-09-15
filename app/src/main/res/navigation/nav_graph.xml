@@ -18,7 +18,11 @@
         android:id="@+id/twoFragment"
         android:name="de.syntaxinstitut.budgiebreeder.ui.two.NesterFragment"
         android:label="TwoFragment"
-        tools:layout="@layout/fragment_nester"/>
+        tools:layout="@layout/fragment_nester">
+        <action
+            android:id="@+id/action_twoFragment_to_detailNesterFragment"
+            app:destination="@id/detailNesterFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="de.syntaxinstitut.budgiebreeder.ui.splashScreen.SplashScreenFragment"
@@ -27,4 +31,8 @@
             android:id="@+id/action_splashScreenFragment_to_oneFragment"
             app:destination="@id/oneFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailNesterFragment"
+        android:name="de.syntaxinstitut.budgiebreeder.DetailNesterFragment"
+        android:label="DetailNesterFragment" />
 </navigation>

@@ -39,8 +39,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="350dp"
-            android:layout_height="515dp"
+            android:layout_width="347dp"
+            android:layout_height="451dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="#85D2D0"
             android:elevation="2dp"
@@ -66,7 +66,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date1"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -74,6 +74,7 @@
                         android:text="Date"
                         app:layout_column="0"
                         app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck"
                         tools:text="21.04.2022" />
                 </androidx.cardview.widget.CardView>
 
@@ -87,7 +88,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date2"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -95,6 +96,7 @@
                         android:text="Date"
                         app:layout_column="0"
                         app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck"
                         tools:text="10.05.2022" />
                 </androidx.cardview.widget.CardView>
 
@@ -109,7 +111,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date3"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -117,6 +119,7 @@
                         android:text="Date"
                         app:layout_column="0"
                         app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck"
                         tools:text="23.04.2022" />
                 </androidx.cardview.widget.CardView>
 
@@ -130,7 +133,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date4"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -138,6 +141,7 @@
                         android:text="Date"
                         app:layout_column="0"
                         app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck"
                         tools:text="11.05.2022" />
                 </androidx.cardview.widget.CardView>
 
@@ -151,7 +155,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date5"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -159,6 +163,7 @@
                         android:text="Date"
                         app:layout_column="0"
                         app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck"
                         tools:text="25.04.2022" />
                 </androidx.cardview.widget.CardView>
 
@@ -172,7 +177,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date6"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -193,14 +198,15 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date7"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
                         android:text="Date"
                         app:layout_column="0"
-                        app:layout_row="0" />
+                        app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -213,7 +219,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date8"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -233,7 +239,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date9"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -253,7 +259,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date10"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -273,7 +279,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date11"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -293,7 +299,7 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date12"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -314,7 +320,7 @@
 
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date13"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -334,54 +340,15 @@
                     app:cardCornerRadius="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/date14"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
                         android:text="Date"
                         app:layout_column="0"
-                        app:layout_row="0" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="34dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
-                    app:cardCornerRadius="10dp">
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName5"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Date"
-                        app:layout_column="0"
-                        app:layout_row="0" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
-                    app:cardCornerRadius="10dp">
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName5"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Date"
-                        app:layout_column="0"
-                        app:layout_row="0" />
+                        app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck" />
                 </androidx.cardview.widget.CardView>
 
 
@@ -393,15 +360,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginBottom="22dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
             app:layout_constraintBottom_toTopOf="@+id/cardView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            tools:text="HanSolo & PrinzessinLea" />
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:text="HanSolo PrinzessinLea" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
