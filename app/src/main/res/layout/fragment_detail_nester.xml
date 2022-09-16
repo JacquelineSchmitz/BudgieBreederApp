@@ -358,7 +358,7 @@
         </androidx.cardview.widget.CardView>
 
         <EditText
-            android:id="@+id/editTextTextPersonName23"
+            android:id="@+id/name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
