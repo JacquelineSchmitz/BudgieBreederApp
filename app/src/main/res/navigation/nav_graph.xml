@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_oneFragment_to_twoFragment"
             app:destination="@id/twoFragment" />
+        <action
+            android:id="@+id/action_oneFragment_to_fotoFragment"
+            app:destination="@id/fotoFragment" />
     </fragment>
     <fragment
         android:id="@+id/twoFragment"
@@ -35,4 +38,8 @@
         android:id="@+id/detailNesterFragment"
         android:name="de.syntaxinstitut.budgiebreeder.DetailNesterFragment"
         android:label="DetailNesterFragment" />
+    <fragment
+        android:id="@+id/fotoFragment"
+        android:name="de.syntaxinstitut.budgiebreeder.ui.fotos.FotoFragment"
+        android:label="FotoFragment" />
 </navigation>
