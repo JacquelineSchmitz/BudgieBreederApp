@@ -1,4 +1,4 @@
-package de.syntaxinstitut.budgiebreeder.ui.home
+package de.syntaxinstitut.budgiebreeder.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import de.syntaxinstitut.budgiebreeder.R
 import de.syntaxinstitut.budgiebreeder.databinding.FragmentOneBinding
@@ -21,18 +20,7 @@ class OneFragment : Fragment(R.layout.fragment_one) {
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
     private lateinit var binding: FragmentOneBinding
 
-    /** Das ViewModel zu diesem Fragment */
-    private val viewModel: OneViewModel by viewModels()
 
-    /* -------------------- Lifecycle -------------------- */
-
-    /**
-     * Lifecycle Methode wenn das View erstellt wird
-     *
-     * @param inflater                Layout Inflater
-     * @param container               View Gruppe
-     * @param savedInstanceState      Eventuelle saveStates
-     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -52,23 +40,24 @@ class OneFragment : Fragment(R.layout.fragment_one) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /* -------------------- UI-Interaktionen -------------------- */
 
-       binding.btnNestFragmentOne.setOnClickListener {
-           viewModel.navigateToFragmentTwo()
-       }
+        binding.btnNestFragmentOne.setOnClickListener{
+            findNavController().navigate(
+                OneFragmentDirections.actionOneFragmentToTwoFragment()
+            )
+        }
 
-        /* -------------------- Observer -------------------- */
 
-        // Navigation zum zweiten Fragment
-        viewModel.navigateToFragmentTwo.observe(viewLifecycleOwner) {
-            if (it) {
-                findNavController().navigate(
-                    OneFragmentDirections.actionOneFragmentToTwoFragment()
-                )
+        binding.btnFotosFragmentOne.setOnClickListener{
+            findNavController().navigate(
+                OneFragmentDirections.actionOneFragmentToFotoFragment()
+            )
+        }
+        binding.btnFlirtboxFragmentOne.setOnClickListener{
+            findNavController().navigate(
+                OneFragmentDirections.actionOneFragmentToFlirtBoxFragment()
+            )
 
-                viewModel.resetAllValues()
-            }
         }
     }
 }

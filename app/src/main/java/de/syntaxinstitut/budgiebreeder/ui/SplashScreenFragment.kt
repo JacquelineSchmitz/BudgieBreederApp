@@ -1,4 +1,4 @@
-package de.syntaxinstitut.budgiebreeder.ui.splashScreen
+package de.syntaxinstitut.budgiebreeder.ui
 
 import android.os.Bundle
 import android.os.Handler

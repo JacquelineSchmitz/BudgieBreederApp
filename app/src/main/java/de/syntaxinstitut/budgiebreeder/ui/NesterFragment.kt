@@ -1,4 +1,4 @@
-package de.syntaxinstitut.budgiebreeder.ui.nest
+package de.syntaxinstitut.budgiebreeder.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,23 +15,7 @@ import de.syntaxinstitut.budgiebreeder.databinding.FragmentNesterBinding
  * Fragment 2
  */
 class NesterFragment : Fragment(R.layout.fragment_nester) {
-
-    /* -------------------- Klassen Variablen -------------------- */
-
-    /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
-    private lateinit var binding: FragmentNesterBinding
-
-    /** Das ViewModel zu diesem Fragment */
-    private val viewModel: NesterViewModel by viewModels()
-
-    /* -------------------- Lifecycle -------------------- */
-    /**
-     * Lifecycle Methode wenn das View erstellt wird
-     *
-     * @param inflater                Layout Inflater
-     * @param container               View Gruppe
-     * @param savedInstanceState      Eventuelle saveStates
-     */
+    private lateinit var binding : FragmentNesterBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

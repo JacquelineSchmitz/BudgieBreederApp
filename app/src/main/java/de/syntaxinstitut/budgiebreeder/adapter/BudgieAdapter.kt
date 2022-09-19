@@ -3,15 +3,11 @@ package de.syntaxinstitut.budgiebreeder.adapter
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import de.syntaxinstitut.budgiebreeder.data.model.BirthDate
-import de.syntaxinstitut.budgiebreeder.databinding.FragmentNesterBinding
 import de.syntaxinstitut.budgiebreeder.databinding.FragmentOneBinding
-import de.syntaxinstitut.budgiebreeder.ui.home.OneFragment
-import de.syntaxinstitut.budgiebreeder.ui.home.OneFragmentDirections
+import de.syntaxinstitut.budgiebreeder.ui.OneFragmentDirections
 
 
 class BudgieAdapter (
@@ -45,12 +41,16 @@ class BudgieAdapter (
                 .navigate(OneFragmentDirections.actionOneFragmentToFotoFragment())
         }
 
+        holder.binding.btnFlirtboxFragmentOne.setOnClickListener() {
+            holder.itemView.findNavController()
+                .navigate(OneFragmentDirections.actionOneFragmentToFlirtBoxFragment())
+        }
+
 
     }
 
     override fun getItemCount(): Int {
         return dataset.size
     }
-
 }
 
