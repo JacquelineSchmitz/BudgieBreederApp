@@ -32,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/recyclerView"
+            app:layout_constraintTop_toTopOf="@+id/fotos_rv"
             app:layout_constraintVertical_bias="0.501"
             app:srcCompat="@drawable/flirtbox_image" />
 
@@ -58,7 +58,7 @@
             app:srcCompat="@drawable/png_transparent_desktop_feather_graphy_falling_feathers_animals_monochrome_digital_media_thumbnail_1" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/fotos_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="60dp"

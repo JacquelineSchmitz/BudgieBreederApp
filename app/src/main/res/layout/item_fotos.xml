@@ -13,7 +13,7 @@
         android:padding="20dp">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_fotos2"
+            android:id="@+id/cardView_fotos"
             android:layout_width="wrap_content"
             android:layout_height="145dp"
             app:cardBackgroundColor="@color/white"
@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imageLemonCherry"
+                android:id="@+id/pic_iv"
                 android:layout_width="157dp"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"

@@ -15,6 +15,7 @@
             android:id="@+id/background_nester"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="30dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -162,10 +163,12 @@
             android:layout_width="331dp"
             android:layout_height="253dp"
             android:layout_marginStart="116dp"
+            android:layout_marginTop="-20dp"
             android:layout_marginBottom="512dp"
             android:rotation="181"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/png_transparent_desktop_feather_graphy_falling_feathers_animals_monochrome_digital_media_thumbnail_1" />
 
         <ImageView
@@ -183,12 +186,15 @@
             app:srcCompat="@drawable/feder" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="414dp"
-            android:layout_height="402dp"
+            android:id="@+id/nester_rv"
+            android:layout_width="416dp"
+            android:layout_height="381dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="@+id/background_nester"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_nester" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

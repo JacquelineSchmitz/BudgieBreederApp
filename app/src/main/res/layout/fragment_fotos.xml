@@ -57,7 +57,7 @@
             app:srcCompat="@drawable/png_transparent_desktop_feather_graphy_falling_feathers_animals_monochrome_digital_media_thumbnail_1" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/fotos_rv"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="130dp"
