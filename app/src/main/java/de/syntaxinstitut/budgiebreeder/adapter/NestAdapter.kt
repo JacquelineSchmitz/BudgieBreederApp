@@ -2,10 +2,13 @@ package de.syntaxinstitut.budgiebreeder.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
 import de.syntaxinstitut.budgiebreeder.data.model.NestButton
 import de.syntaxinstitut.budgiebreeder.databinding.ItemNesterBinding
+import de.syntaxinstitut.budgiebreeder.ui.NesterFragment
+import de.syntaxinstitut.budgiebreeder.ui.NesterFragmentDirections
 
 
 class NestAdapter(
@@ -26,7 +29,11 @@ class NestAdapter(
 
         holder.binding.name.text = currentButton.name
 
-        // todo navigation einfügen
+        holder.binding.nestButton.setOnClickListener{
+            holder.itemView.findNavController()
+                .navigate(NesterFragmentDirections.actionNesterFragmentToDetailNesterFragment(currentButton.id))
+        }
+
     }
 
     override fun getItemCount(): Int {

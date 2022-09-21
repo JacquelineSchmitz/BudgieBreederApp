@@ -11,8 +11,8 @@
         android:label="OneFragment"
         tools:layout="@layout/fragment_one">
         <action
-            android:id="@+id/action_oneFragment_to_twoFragment"
-            app:destination="@id/twoFragment" />
+            android:id="@+id/action_oneFragment_to_nesterFragment"
+            app:destination="@id/nesterFragment" />
         <action
             android:id="@+id/action_oneFragment_to_fotoFragment"
             app:destination="@id/fotoFragment" />
@@ -21,12 +21,12 @@
             app:destination="@id/flirtBoxFragment" />
     </fragment>
     <fragment
-        android:id="@+id/twoFragment"
+        android:id="@+id/nesterFragment"
         android:name="de.syntaxinstitut.budgiebreeder.ui.NesterFragment"
-        android:label="TwoFragment"
+        android:label="NesterFragment"
         tools:layout="@layout/fragment_nester">
         <action
-            android:id="@+id/action_twoFragment_to_detailNesterFragment"
+            android:id="@+id/action_nesterFragment_to_detailNesterFragment"
             app:destination="@id/detailNesterFragment" />
     </fragment>
     <fragment
@@ -39,8 +39,12 @@
     </fragment>
     <fragment
         android:id="@+id/detailNesterFragment"
-        android:name="de.syntaxinstitut.budgiebreeder.DetailNesterFragment"
-        android:label="DetailNesterFragment" />
+        android:name="de.syntaxinstitut.budgiebreeder.ui.DetailNesterFragment"
+        android:label="DetailNesterFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/fotoFragment"
         android:name="de.syntaxinstitut.budgiebreeder.ui.FotoFragment"

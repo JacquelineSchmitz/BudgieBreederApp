@@ -43,7 +43,7 @@ class OneFragment : Fragment(R.layout.fragment_one) {
 
         binding.btnNestFragmentOne.setOnClickListener{
             findNavController().navigate(
-                OneFragmentDirections.actionOneFragmentToTwoFragment()
+                OneFragmentDirections.actionOneFragmentToNesterFragment()
             )
         }
 

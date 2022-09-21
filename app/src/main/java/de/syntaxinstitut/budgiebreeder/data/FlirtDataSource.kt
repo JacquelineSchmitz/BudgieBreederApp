@@ -1,4 +1,6 @@
-package de.syntaxinstitut.budgiebreeder.data.model
+package de.syntaxinstitut.budgiebreeder.data
+
+import de.syntaxinstitut.budgiebreeder.data.model.FlirtData
 
 class FlirtDataSource {
     fun loadFlirts(): List<FlirtData>{
