@@ -37,7 +37,7 @@ class FotoFragment: Fragment(R.layout.fragment_fotos) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        viewModel.pic.observe(
+        viewModel.pics.observe(
             viewLifecycleOwner
         ) {
             binding.fotosRv.adapter = PicAdapter(it)
