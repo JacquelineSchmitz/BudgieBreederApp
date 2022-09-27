@@ -12,7 +12,8 @@ import de.syntaxinstitut.budgiebreeder.MainViewModel
 import de.syntaxinstitut.budgiebreeder.R
 import de.syntaxinstitut.budgiebreeder.databinding.FragmentDetailNesterBinding
 
-
+//todo detailnester einmal updaten, beim hinzufügen der daten ... hinzufügen zu den entsprechenden listen
+//todo auslesen der daten aus der liste und setzten dies auf edit text
 
 class DetailNesterFragment : Fragment() {
     private lateinit var binding: FragmentDetailNesterBinding

@@ -1,11 +1,21 @@
 package de.syntaxinstitut.budgiebreeder.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import de.syntaxinstitut.budgiebreeder.data.local.DetailNestDataBase
+import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
+import de.syntaxinstitut.budgiebreeder.data.model.FlirtData
 import de.syntaxinstitut.budgiebreeder.data.model.PicData
 import de.syntaxinstitut.budgiebreeder.data.remote.BudgieApi
+import java.util.*
 
-class Repository(private val budgieApi: BudgieApi) {
+class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailNestDataBase) {
+
+    val detailNestList: LiveData<List<DetailNest>> =
+        dataBase.detailNestDataBaseDao.getAllDetailNest()
+    val flirtDataList: LiveData<List<FlirtData>> =
+        dataBase.detailNestDataBaseDao.getAllFlirtData()
 
    private val _picturesList = MutableLiveData<List<String>> ()
            val pictureslist: LiveData<List<String>>
@@ -14,4 +24,70 @@ class Repository(private val budgieApi: BudgieApi) {
     suspend fun getPictures(){
         _picturesList.value = budgieApi.retrofitService.getPictures()
     }
+
+    suspend fun insert(detailNest: DetailNest) {
+        try {
+            dataBase.detailNestDataBaseDao.insertDetailNest(detailNest)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+    }
+    suspend fun insert(flirtData: FlirtData) {
+        try {
+            dataBase.detailNestDataBaseDao.insertFlirtData(flirtData)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+
+    }
+
+    suspend fun deleteDetailNest(id: Long) {
+        try {
+            dataBase.detailNestDataBaseDao.deleteDetailNest(id)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+    }
+
+    suspend fun deleteFlirtData(id: Long) {
+        try {
+            dataBase.detailNestDataBaseDao.deleteFlirtData(id)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+    }
+
+    suspend fun updateDetailNest(detailNest: DetailNest) {
+        try {
+            dataBase.detailNestDataBaseDao.updateDetailNest(detailNest)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+    }
+    suspend fun updateFlirtData(flirtData: FlirtData) {
+        try {
+            dataBase.detailNestDataBaseDao.updateFlirtData(flirtData)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+    }
+    suspend fun getBirthdate(): List<Date> {
+        var birthdate : List<Date> = listOf<Date>()
+        try {
+            birthdate = dataBase.detailNestDataBaseDao.getBirthdate()
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+        return birthdate
+    }
+    suspend fun getPlaceddate(): List<Date> {
+        var placeddate : List<Date> = listOf<Date>()
+        try {
+            placeddate = dataBase.detailNestDataBaseDao.getPlaceddate()
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+        return placeddate
+    }
+
 }

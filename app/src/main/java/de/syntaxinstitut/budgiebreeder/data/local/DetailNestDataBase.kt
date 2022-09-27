@@ -5,9 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
+import de.syntaxinstitut.budgiebreeder.data.model.FlirtData
 
 
-@Database(entities = [DetailNest::class], version = 1)
+@Database(entities = [DetailNest::class, FlirtData::class], version = 1)
 abstract class DetailNestDataBase : RoomDatabase() {
     abstract val detailNestDataBaseDao : DetailNestDataBaseDao
 }
@@ -15,7 +16,7 @@ abstract class DetailNestDataBase : RoomDatabase() {
 
 private lateinit var INSTANCE : DetailNestDataBase
 
-fun getDetailNestDatabase(context: Context): DetailNestDataBase{
+fun getDatabase(context: Context): DetailNestDataBase{
     synchronized(DetailNestDataBase::class.java){
         if(!::INSTANCE.isInitialized){
             INSTANCE = Room.databaseBuilder(

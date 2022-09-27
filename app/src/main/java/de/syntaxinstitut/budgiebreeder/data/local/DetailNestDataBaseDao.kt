@@ -1,24 +1,35 @@
 package de.syntaxinstitut.budgiebreeder.data.local
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
-import kotlinx.coroutines.selects.select
+import de.syntaxinstitut.budgiebreeder.data.model.FlirtData
 import java.util.*
 
 @Dao
 interface DetailNestDataBaseDao {
-//    @Insert
-//    suspend fun insert (date: Date)
-//    // @Query("Delete From DetailNest Where id = :id")
-//    // suspend fun delete (id: Long)
-//    @Query("Select birthdate From DetailNest")
-//    suspend fun getBirthdate () : List<Date>
-//    @Query("Select placeddate From DetailNest")
-//    suspend fun getPlacedDate () : List<Date>
-    @Update
-    suspend fun update (date: Date)
 
+    @Update
+    suspend fun updateDetailNest (detailNest: DetailNest)
+    @Update
+    suspend fun updateFlirtData (flirtData: FlirtData)
+    @Query("Delete From FlirtData Where id = :id")
+    suspend fun deleteFlirtData (id: Long)
+    @Query("Delete From DetailNest Where id = :id")
+    suspend fun deleteDetailNest (id: Long)
+    @Insert
+    suspend fun insertFlirtData (flirtData: FlirtData)
+    @Insert
+    suspend fun insertDetailNest (detailNest: DetailNest)
+    @Query("Select birthdate From DetailNest")
+    suspend fun getBirthdate () : List<Date>
+    @Query("Select placeddate From DetailNest")
+    suspend fun getPlaceddate () : List<Date>
+    @Query ("SELECT * FROM DetailNest")
+    fun getAllDetailNest(): LiveData<List<DetailNest>>
+    @Query ("SELECT * FROM FlirtData")
+    fun getAllFlirtData(): LiveData<List<FlirtData>>
 }
