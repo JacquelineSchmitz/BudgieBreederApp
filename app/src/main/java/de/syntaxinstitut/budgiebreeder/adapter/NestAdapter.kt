@@ -31,7 +31,7 @@ class NestAdapter(
 
         holder.binding.nestButton.setOnClickListener{
             holder.itemView.findNavController()
-                .navigate(NesterFragmentDirections.actionNesterFragmentToDetailNesterFragment(currentButton.id))
+                .navigate(NesterFragmentDirections.actionNesterFragmentToDetailNesterFragment(currentButton.id.toInt()))
         }
 
     }
