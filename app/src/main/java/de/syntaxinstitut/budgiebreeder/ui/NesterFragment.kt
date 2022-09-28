@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer
 import de.syntaxinstitut.budgiebreeder.MainViewModel
 import de.syntaxinstitut.budgiebreeder.R
 import de.syntaxinstitut.budgiebreeder.adapter.NestAdapter
+import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
 import de.syntaxinstitut.budgiebreeder.databinding.FragmentNesterBinding
 
 
@@ -36,11 +37,20 @@ class NesterFragment : Fragment(R.layout.fragment_nester) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.nest.observe(
+        viewModel.detailNest.observe(
             viewLifecycleOwner,
             Observer {
                 binding.nesterRv.adapter = NestAdapter(it)
             }
         )
+        val id = 0
+
+        binding.floatingActionButton.setOnClickListener{
+            viewModel.insertNest(
+                DetailNest(id++)
+            )
+        }
+
     }
+
 }

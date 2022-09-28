@@ -1,9 +1,11 @@
 package de.syntaxinstitut.budgiebreeder.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
 
 import de.syntaxinstitut.budgiebreeder.data.model.NestButton
 import de.syntaxinstitut.budgiebreeder.databinding.ItemNesterBinding
@@ -12,8 +14,14 @@ import de.syntaxinstitut.budgiebreeder.ui.NesterFragmentDirections
 
 
 class NestAdapter(
-    private val dataset: List<NestButton>
+    private var dataset: List<DetailNest>
 ) : RecyclerView.Adapter<NestAdapter.ItemViewHolder>(){
+
+    @SuppressLint ("NotifyDataSetChanged")
+    fun submitList(list: List<DetailNest>){
+        dataset = list
+        notifyDataSetChanged()
+    }
 
     inner class ItemViewHolder(val binding: ItemNesterBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -27,7 +35,7 @@ class NestAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val currentButton = dataset[position]
 
-        holder.binding.name.text = currentButton.name
+        holder.binding.name.text = currentButton.title
 
         holder.binding.nestButton.setOnClickListener{
             holder.itemView.findNavController()

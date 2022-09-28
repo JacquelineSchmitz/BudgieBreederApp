@@ -10,6 +10,6 @@ data class DetailNest (
     @PrimaryKey (autoGenerate = true)
     val id : Long = 0,
     val title : String,
-    val placeddate : List<Date>,
-    val birthdate : List<Date>
+    val placeddate : String,
+    val birthdate : String
         )

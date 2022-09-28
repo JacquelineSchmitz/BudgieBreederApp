@@ -25,6 +25,7 @@ fun getDatabase(context: Context): DetailNestDataBase{
                 "budgie_database"
             ).build()
         }
+        //return INSTANCE
     }
 
     return INSTANCE

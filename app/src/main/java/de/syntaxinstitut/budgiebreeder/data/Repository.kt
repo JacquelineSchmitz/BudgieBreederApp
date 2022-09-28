@@ -25,14 +25,14 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
         _picturesList.value = budgieApi.retrofitService.getPictures()
     }
 
-    suspend fun insert(detailNest: DetailNest) {
+    suspend fun insertNest(detailNest: DetailNest) {
         try {
             dataBase.detailNestDataBaseDao.insertDetailNest(detailNest)
         } catch (e: Exception) {
             Log.e("Repository", "Failed to insert into database: $e")
         }
     }
-    suspend fun insert(flirtData: FlirtData) {
+    suspend fun insertFlirt(flirtData: FlirtData) {
         try {
             dataBase.detailNestDataBaseDao.insertFlirtData(flirtData)
         } catch (e: Exception) {
@@ -71,8 +71,8 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
             Log.e("Repository", "Failed to insert into database: $e")
         }
     }
-    suspend fun getBirthdate(): List<Date> {
-        var birthdate : List<Date> = listOf<Date>()
+    suspend fun getBirthdate(): String {
+        var birthdate : String = ""
         try {
             birthdate = dataBase.detailNestDataBaseDao.getBirthdate()
         } catch (e: Exception) {
@@ -80,8 +80,8 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
         }
         return birthdate
     }
-    suspend fun getPlaceddate(): List<Date> {
-        var placeddate : List<Date> = listOf<Date>()
+    suspend fun getPlaceddate(): String {
+        var placeddate : String = ""
         try {
             placeddate = dataBase.detailNestDataBaseDao.getPlaceddate()
         } catch (e: Exception) {

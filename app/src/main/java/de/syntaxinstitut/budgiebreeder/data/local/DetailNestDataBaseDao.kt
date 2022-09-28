@@ -14,22 +14,31 @@ interface DetailNestDataBaseDao {
 
     @Update
     suspend fun updateDetailNest (detailNest: DetailNest)
+
     @Update
     suspend fun updateFlirtData (flirtData: FlirtData)
+
     @Query("Delete From FlirtData Where id = :id")
     suspend fun deleteFlirtData (id: Long)
+
     @Query("Delete From DetailNest Where id = :id")
     suspend fun deleteDetailNest (id: Long)
+
     @Insert
     suspend fun insertFlirtData (flirtData: FlirtData)
+
     @Insert
     suspend fun insertDetailNest (detailNest: DetailNest)
+
     @Query("Select birthdate From DetailNest")
-    suspend fun getBirthdate () : List<Date>
+    suspend fun getBirthdate () : String
+
     @Query("Select placeddate From DetailNest")
-    suspend fun getPlaceddate () : List<Date>
+    suspend fun getPlaceddate () : String
+
     @Query ("SELECT * FROM DetailNest")
     fun getAllDetailNest(): LiveData<List<DetailNest>>
+
     @Query ("SELECT * FROM FlirtData")
     fun getAllFlirtData(): LiveData<List<FlirtData>>
 }
