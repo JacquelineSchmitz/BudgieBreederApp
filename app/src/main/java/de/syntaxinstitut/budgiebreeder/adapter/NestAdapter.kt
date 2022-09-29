@@ -14,7 +14,8 @@ import de.syntaxinstitut.budgiebreeder.ui.NesterFragmentDirections
 
 
 class NestAdapter(
-    private var dataset: List<DetailNest>
+    private var dataset: List<DetailNest>,
+    val handler: (DetailNest) -> Unit
 ) : RecyclerView.Adapter<NestAdapter.ItemViewHolder>(){
 
     @SuppressLint ("NotifyDataSetChanged")
@@ -39,7 +40,12 @@ class NestAdapter(
 
         holder.binding.nestButton.setOnClickListener{
             holder.itemView.findNavController()
-                .navigate(NesterFragmentDirections.actionNesterFragmentToDetailNesterFragment(currentButton.id.toInt()))
+                .navigate(NesterFragmentDirections.actionNesterFragmentToDetailNesterFragment(currentButton.id))
+        }
+
+        holder.binding.imageButton2.setOnClickListener{
+            handler(currentButton)
+            notifyItemRemoved(position)
         }
 
     }

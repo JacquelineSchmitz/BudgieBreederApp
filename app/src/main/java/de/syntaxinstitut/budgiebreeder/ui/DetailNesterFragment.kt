@@ -1,6 +1,7 @@
 package de.syntaxinstitut.budgiebreeder.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,12 +19,12 @@ import de.syntaxinstitut.budgiebreeder.databinding.FragmentDetailNesterBinding
 class DetailNesterFragment : Fragment() {
     private lateinit var binding: FragmentDetailNesterBinding
     private val viewModel: MainViewModel by activityViewModels()
-    private var nestId: Int = 0
+    private var nestId: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            nestId = it.getInt("id")
+            nestId = it.getLong("id")
         }
     }
 
@@ -40,5 +41,14 @@ class DetailNesterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+        var currentNest = viewModel.detailNest.value!!.find { it.id == nestId }
+
+        binding.buttonName.setOnClickListener{
+            var name = binding.nameText.text.toString()
+            Log.d("test","${name}")
+            currentNest!!.name = name
+            viewModel.updatedetailNest(currentNest)
+            binding.nameText.text = name
+        }
     }
 }

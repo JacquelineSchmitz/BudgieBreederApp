@@ -40,17 +40,23 @@ class NesterFragment : Fragment(R.layout.fragment_nester) {
         viewModel.detailNest.observe(
             viewLifecycleOwner,
             Observer {
-                binding.nesterRv.adapter = NestAdapter(it)
+                binding.nesterRv.adapter = NestAdapter(it){nestData -> handleUserData(nestData)
+
+                }
             }
         )
-        val id = 0
+        var id: Long = 0
 
         binding.floatingActionButton.setOnClickListener{
             viewModel.insertNest(
-                DetailNest(id++)
+                DetailNest(id++, "Nest${id}", "","","")
             )
         }
 
+    }
+
+    private fun handleUserData(nestData: DetailNest) {
+        viewModel.deleteNest(nestData.id)
     }
 
 }

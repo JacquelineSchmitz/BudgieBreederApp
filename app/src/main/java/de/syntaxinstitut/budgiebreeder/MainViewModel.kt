@@ -54,6 +54,18 @@ class MainViewModel(application: Application) : AndroidViewModel(application){
         viewModelScope.launch {
             repository.insertNest(detailNest)
         }
+
+    }
+    fun deleteNest (id: Long) {
+        viewModelScope.launch {
+            repository.deleteDetailNest(id)
+        }
+    }
+
+    fun updatedetailNest (detailNest: DetailNest){
+        viewModelScope.launch {
+            repository.updateDetailNest(detailNest)
+        }
     }
 }
 

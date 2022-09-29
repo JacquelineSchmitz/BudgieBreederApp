@@ -9,7 +9,8 @@ import java.util.*
 data class DetailNest (
     @PrimaryKey (autoGenerate = true)
     val id : Long = 0,
-    val title : String,
-    val placeddate : String,
-    val birthdate : String
+    var title : String,
+    var name : String,
+    var placeddate : String,
+    var birthdate : String
         )
