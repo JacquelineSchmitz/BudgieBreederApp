@@ -29,6 +29,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application){
 
     val detailNest = repository.detailNestList
     val flirtData = repository.flirtDataList
+    //val eiData = repository.eitDataList
 
     //private val _pic = MutableLiveData<List<PicData>>()
     //val pic: LiveData<List<String>>
