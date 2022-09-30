@@ -5,10 +5,11 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
+import de.syntaxinstitut.budgiebreeder.data.model.EiData
 import de.syntaxinstitut.budgiebreeder.data.model.FlirtData
 
 
-@Database(entities = [DetailNest::class, FlirtData::class], version = 1)
+@Database(entities = [DetailNest::class, FlirtData::class, EiData::class], version = 1)
 abstract class DetailNestDataBase : RoomDatabase() {
     abstract val detailNestDataBaseDao : DetailNestDataBaseDao
 }

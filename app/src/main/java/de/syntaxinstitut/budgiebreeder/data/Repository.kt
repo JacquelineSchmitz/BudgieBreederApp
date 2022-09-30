@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import de.syntaxinstitut.budgiebreeder.data.local.DetailNestDataBase
 import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
+import de.syntaxinstitut.budgiebreeder.data.model.EiData
 import de.syntaxinstitut.budgiebreeder.data.model.FlirtData
 import de.syntaxinstitut.budgiebreeder.data.model.PicData
 import de.syntaxinstitut.budgiebreeder.data.remote.BudgieApi
@@ -16,6 +17,8 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
         dataBase.detailNestDataBaseDao.getAllDetailNest()
     val flirtDataList: LiveData<List<FlirtData>> =
         dataBase.detailNestDataBaseDao.getAllFlirtData()
+    val eitDataList: LiveData<List<EiData>> =
+        dataBase.detailNestDataBaseDao.getAllEiData()
 
    private val _picturesList = MutableLiveData<List<String>> ()
            val pictureslist: LiveData<List<String>>
@@ -40,6 +43,14 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
         }
 
     }
+    suspend fun insertEiData(eiData: EiData) {
+        try {
+            dataBase.detailNestDataBaseDao.insertEiData(eiData)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+
+    }
 
     suspend fun deleteDetailNest(id: Long) {
         try {
@@ -52,6 +63,13 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
     suspend fun deleteFlirtData(id: Long) {
         try {
             dataBase.detailNestDataBaseDao.deleteFlirtData(id)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+    }
+    suspend fun deleteEiData(id: Long) {
+        try {
+            dataBase.detailNestDataBaseDao.deleteEiData(id)
         } catch (e: Exception) {
             Log.e("Repository", "Failed to insert into database: $e")
         }
@@ -71,6 +89,14 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
             Log.e("Repository", "Failed to insert into database: $e")
         }
     }
+    suspend fun updateEiData(eiData: EiData) {
+        try {
+            dataBase.detailNestDataBaseDao.upDateEiData(eiData)
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+    }
+
     suspend fun getBirthdate(): String {
         var birthdate : String = ""
         try {
@@ -88,6 +114,15 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
             Log.e("Repository", "Failed to insert into database: $e")
         }
         return placeddate
+    }
+    suspend fun getEiData(): String {
+        var eiData : String = ""
+        try {
+            eiData = dataBase.detailNestDataBaseDao.getPlaceddate()
+        } catch (e: Exception) {
+            Log.e("Repository", "Failed to insert into database: $e")
+        }
+        return eiData
     }
 
 
