@@ -54,31 +54,38 @@
                     app:layout_constraintVertical_bias="0.4"
                     app:srcCompat="@drawable/ic_baseline_edit_24" />
 
-                <EditText
-                    android:id="@+id/editTextDate"
-                    android:layout_width="162dp"
-                    android:layout_height="37dp"
-                    android:ems="10"
-                    android:inputType="date"
-                    app:cardCornerRadius="10dp"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutGelegt"
+                    android:layout_width="150dp"
+                    android:layout_height="32dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintEnd_toStartOf="@+id/textInputLayoutGeschluepft"
                     app:layout_constraintStart_toEndOf="@+id/imageButton"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <EditText
-                    android:id="@+id/editTextDate2"
-                    android:layout_width="162dp"
-                    android:layout_height="37dp"
-                    android:ems="10"
-                    android:inputType="date"
-                    app:cardCornerRadius="10dp"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputGelegt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutGeschluepft"
+                    android:layout_width="150dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/editTextDate"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayoutGelegt"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputGeschluepft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint" />
+                </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

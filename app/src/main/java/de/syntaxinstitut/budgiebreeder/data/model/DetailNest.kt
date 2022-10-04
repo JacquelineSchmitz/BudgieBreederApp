@@ -10,7 +10,5 @@ data class DetailNest (
     @PrimaryKey (autoGenerate = true)
     val id : Long = 0,
     var title : String,
-    var name : String,
-    var placeddate : String,
-    var birthdate : String
-        )
+    var name : String
+    )

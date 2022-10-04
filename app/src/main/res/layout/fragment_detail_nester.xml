@@ -78,6 +78,7 @@
                     app:srcCompat="@drawable/geschluepft" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/eierRv"
                     android:layout_width="393dp"
                     android:layout_height="419dp"
                     android:layout_marginTop="9dp"
@@ -85,7 +86,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                    tools:listitem="@layout/fragment_nest" />
+                    tools:listitem="@layout/item_ei" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/floatingActionButton2"

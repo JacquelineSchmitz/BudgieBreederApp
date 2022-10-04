@@ -49,7 +49,7 @@ class NesterFragment : Fragment(R.layout.fragment_nester) {
 
         binding.floatingActionButton.setOnClickListener{
             viewModel.insertNest(
-                DetailNest(id++, "Nest${id}", "","","")
+                DetailNest(title = "Nest${id}",name = "")
             )
         }
 

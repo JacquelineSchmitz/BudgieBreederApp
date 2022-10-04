@@ -9,12 +9,13 @@ import de.syntaxinstitut.budgiebreeder.data.Repository
 import de.syntaxinstitut.budgiebreeder.data.local.DetailNestDataBase
 import de.syntaxinstitut.budgiebreeder.data.local.getDatabase
 import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
+import de.syntaxinstitut.budgiebreeder.data.model.EiData
 import de.syntaxinstitut.budgiebreeder.data.model.NestButton
 import de.syntaxinstitut.budgiebreeder.data.model.PicData
 import de.syntaxinstitut.budgiebreeder.data.remote.BudgieApi
 import kotlinx.coroutines.launch
 
-class MainViewModel(application: Application) : AndroidViewModel(application){
+class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val nestButtonDataSource = NestButtonDataSource()
     //private val picDataSource = PictureDataSource()
@@ -29,19 +30,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application){
 
     val detailNest = repository.detailNestList
     val flirtData = repository.flirtDataList
-    //val eiData = repository.eitDataList
+    val eiData = repository.eitDataList
 
     //private val _pic = MutableLiveData<List<PicData>>()
     //val pic: LiveData<List<String>>
-        //get() = _pic
+    //get() = _pic
 
 
     val pics: LiveData<List<String>> = repository.pictureslist
 
 
     init {
-       // _nest.value = nestButtonDataSource.loadNestButton()
-       // _pic.value = picDataSource.loadPictures()
+        // _nest.value = nestButtonDataSource.loadNestButton()
+        // _pic.value = picDataSource.loadPictures()
         loadData()
     }
 
@@ -51,23 +52,43 @@ class MainViewModel(application: Application) : AndroidViewModel(application){
         }
     }
 
-    fun insertNest (detailNest: DetailNest){
+    fun insertNest(detailNest: DetailNest) {
         viewModelScope.launch {
             repository.insertNest(detailNest)
         }
-
     }
-    fun deleteNest (id: Long) {
+
+        fun insertEiData(eiData: EiData) {
+            viewModelScope.launch {
+                repository.insertEiData(eiData)
+            }
+
+        }
+
+        fun deleteNest(id: Long) {
+            viewModelScope.launch {
+                repository.deleteDetailNest(id)
+            }
+        }
+    fun deleteEi(id: Long) {
         viewModelScope.launch {
-            repository.deleteDetailNest(id)
+            repository.deleteEiData(id)
         }
     }
 
-    fun updatedetailNest (detailNest: DetailNest){
-        viewModelScope.launch {
-            repository.updateDetailNest(detailNest)
+        fun updatedetailNest(detailNest: DetailNest) {
+            viewModelScope.launch {
+                repository.updateDetailNest(detailNest)
+            }
         }
+
+
+//        fun updateEiData(eiData: EiData) {
+//            viewModelScope.launch {
+//                repository.updateEiData(eiData)
+//            }
+//        }
     }
-}
+
 
 

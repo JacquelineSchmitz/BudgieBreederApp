@@ -40,12 +40,6 @@ interface DetailNestDataBaseDao {
     @Insert
     suspend fun insertEiData (eiData: EiData)
 
-    @Query("Select birthdate From DetailNest")
-    suspend fun getBirthdate () : String
-
-    @Query("Select placeddate From DetailNest")
-    suspend fun getPlaceddate () : String
-
     @Query ("SELECT * FROM DetailNest")
     fun getAllDetailNest(): LiveData<List<DetailNest>>
 

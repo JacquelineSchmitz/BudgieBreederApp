@@ -97,33 +97,15 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
         }
     }
 
-    suspend fun getBirthdate(): String {
-        var birthdate : String = ""
-        try {
-            birthdate = dataBase.detailNestDataBaseDao.getBirthdate()
-        } catch (e: Exception) {
-            Log.e("Repository", "Failed to insert into database: $e")
-        }
-        return birthdate
-    }
-    suspend fun getPlaceddate(): String {
-        var placeddate : String = ""
-        try {
-            placeddate = dataBase.detailNestDataBaseDao.getPlaceddate()
-        } catch (e: Exception) {
-            Log.e("Repository", "Failed to insert into database: $e")
-        }
-        return placeddate
-    }
-    suspend fun getEiData(): String {
-        var eiData : String = ""
-        try {
-            eiData = dataBase.detailNestDataBaseDao.getPlaceddate()
-        } catch (e: Exception) {
-            Log.e("Repository", "Failed to insert into database: $e")
-        }
-        return eiData
-    }
+//    suspend fun getEiData(): String {
+//        var eiData : String = ""
+//        try {
+//            eiData = dataBase.detailNestDataBaseDao.()
+//        } catch (e: Exception) {
+//            Log.e("Repository", "Failed to insert into database: $e")
+//        }
+//        return eiData
+//    }
 
 
 }
