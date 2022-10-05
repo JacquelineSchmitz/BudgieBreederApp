@@ -48,6 +48,8 @@ class DetailNesterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+
+
         var currentNest = viewModel.detailNest.value!!.find { it.id == nestId }
 
         binding.buttonName.setOnClickListener {
@@ -65,13 +67,18 @@ class DetailNesterFragment : Fragment() {
         binding.floatingActionButton2.setOnClickListener {
             viewModel.insertEiData(EiData(gelegt = "", geschluepft = ""))
         }
+        var adapter = DetailNestAdapter()
+        binding.eierRv.adapter = adapter
         viewModel.eiData.observe(
             viewLifecycleOwner,
-            Observer {
-                binding.eierRv.adapter = DetailNestAdapter(it) { eiData ->
-                    handleEiData(eiData)
 
-                }
+            Observer {
+                Log.e("test",viewModel.eiData.value.toString())
+                adapter.submitList(it)
+//                binding.eierRv.adapter = DetailNestAdapter(viewModel.eiData.value!!) { eiData ->
+//                    handleEiData(eiData)
+//
+//                }
             }
         )
 
