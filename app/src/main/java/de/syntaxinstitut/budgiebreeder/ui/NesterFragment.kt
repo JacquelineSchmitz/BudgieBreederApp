@@ -23,6 +23,7 @@ import de.syntaxinstitut.budgiebreeder.databinding.FragmentNesterBinding
 class NesterFragment : Fragment(R.layout.fragment_nester) {
     private lateinit var binding : FragmentNesterBinding
     private val viewModel : MainViewModel by activityViewModels()
+    private var id: Long = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,12 +46,13 @@ class NesterFragment : Fragment(R.layout.fragment_nester) {
                 }
             }
         )
-        var id: Long = 0
+        //var id: Long = 0
 
         binding.floatingActionButton.setOnClickListener{
             viewModel.insertNest(
                 DetailNest(title = "Nest${id}",name = "")
             )
+            id++
         }
 
     }

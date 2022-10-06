@@ -11,8 +11,10 @@ import de.syntaxinstitut.budgiebreeder.data.model.EiData
 import de.syntaxinstitut.budgiebreeder.databinding.ItemEiBinding
 
 
-class DetailNestAdapter() : RecyclerView.Adapter<DetailNestAdapter.ItemViewHolder>() {
-    private var dataset: List<EiData> = listOf()
+class DetailNestAdapter(
+    private var dataset: List<EiData>
+) : RecyclerView.Adapter<DetailNestAdapter.ItemViewHolder>() {
+
     // val handler: (EiData) -> Unit
 
     @SuppressLint("NotifyDataSetChanged")
@@ -36,12 +38,13 @@ class DetailNestAdapter() : RecyclerView.Adapter<DetailNestAdapter.ItemViewHolde
     override fun onBindViewHolder(holder: DetailNestAdapter.ItemViewHolder, position: Int) {
         val currentEi = dataset[position]
 
-
-        val editableGelegt: Editable = SpannableStringBuilder(currentEi.gelegt)
-        holder.binding.textInputGelegt.text = editableGelegt
-
-        val editableGeschluepft: Editable = SpannableStringBuilder(currentEi.geschluepft)
-        holder.binding.textInputGeschluepft.text = editableGeschluepft
+        holder.binding.textInputGelegt.setText(currentEi.gelegt)
+        holder.binding.textInputGeschluepft.setText(currentEi.gelegt)
+//        val editableGelegt: Editable = SpannableStringBuilder(currentEi.gelegt)
+//        holder.binding.textInputGelegt.text = editableGelegt
+//
+//        val editableGeschluepft: Editable = SpannableStringBuilder(currentEi.geschluepft)
+//        holder.binding.textInputGeschluepft.text = editableGeschluepft
 
     }
 

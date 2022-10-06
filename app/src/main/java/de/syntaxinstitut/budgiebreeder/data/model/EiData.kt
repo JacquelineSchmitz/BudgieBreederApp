@@ -8,5 +8,6 @@ data class EiData (
         @PrimaryKey(autoGenerate = true)
         val id: Long = 0,
         val gelegt: String,
-        val geschluepft: String
+        val geschluepft: String,
+        val nestId: Long
         )

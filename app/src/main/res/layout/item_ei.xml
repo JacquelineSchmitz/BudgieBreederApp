@@ -7,11 +7,8 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/nest_button"
             android:layout_width="384dp"
             android:layout_height="42dp"
@@ -67,7 +64,8 @@
                         android:id="@+id/textInputGelegt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="hint" />
+                        android:hint="hint"
+                        tools:ignore="TouchTargetSizeCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -84,11 +82,11 @@
                         android:id="@+id/textInputGeschluepft"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="hint" />
+                        android:hint="hint"
+                        android:text="24.04" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
