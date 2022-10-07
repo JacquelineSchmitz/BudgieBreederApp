@@ -8,85 +8,92 @@
     </data>
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/nest_button"
-            android:layout_width="384dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="#FFF4BD"
-            android:elevation="2dp"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/nest_button"
+        android:layout_width="360dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#FFF4BD"
+        android:elevation="2dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="39dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp">
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.98"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.6"
-                    app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+            <ImageButton
+                android:id="@+id/imageButtonLoeschen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.98"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
 
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="-15dp"
-                    android:background="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.048"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.4"
-                    app:srcCompat="@drawable/ic_baseline_edit_24" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayoutGelegt"
-                    android:layout_width="150dp"
-                    android:layout_height="32dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textInputLayoutGeschluepft"
-                    app:layout_constraintStart_toEndOf="@+id/imageButton"
-                    app:layout_constraintTop_toTopOf="parent">
+            <EditText
+                android:id="@+id/textInputGelegt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:hint="Datum"
+                android:textColor="#030303"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textInputGelegt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="hint"
-                        tools:ignore="TouchTargetSizeCheck" />
-                </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/textInputGeschluepft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:hint="Datum"
+                android:textColor="#030303"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayoutGeschluepft"
-                    android:layout_width="150dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="12dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-                    app:layout_constraintStart_toEndOf="@+id/textInputLayoutGelegt"
-                    app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:id="@+id/imageButtonSpeichern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonLoeschen"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.466"
+                app:srcCompat="@drawable/ic_baseline_check_box_24" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textInputGeschluepft"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="hint"
-                        android:text="24.04" />
-                </com.google.android.material.textfield.TextInputLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+            <!-- <com.google.android.material.textfield.TextInputLayout
+                     android:id="@+id/textInputLayoutGeschluepft"
+                     android:layout_width="150dp"
+                     android:layout_height="32dp"
+                     android:layout_marginStart="12dp"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+                     app:layout_constraintStart_toEndOf="@+id/textInputLayoutGelegt"
+                     app:layout_constraintTop_toTopOf="parent">
+
+                     <com.google.android.material.textfield.TextInputEditText
+                         android:id="@+id/textInputGeschluepft"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="hint" />
+                 </com.google.android.material.textfield.TextInputLayout>
+ -->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </layout>

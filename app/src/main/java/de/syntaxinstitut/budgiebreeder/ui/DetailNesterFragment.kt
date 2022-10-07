@@ -53,10 +53,12 @@ class DetailNesterFragment : Fragment() {
         var currentNest = viewModel.detailNest.value!!.find { it.id == nestId }
         binding.nameText.setText(currentNest!!.name)
         binding.buttonName.setOnClickListener {
-            var name = binding.nameText.text.toString()
-            Log.d("test", "${name}")
-            currentNest!!.name = name
-            viewModel.updatedetailNest(currentNest)
+
+            val name = binding.nameText.text.toString()
+
+                Log.d("test", "${name}")
+                currentNest!!.name = name
+                viewModel.updatedetailNest(currentNest)
 
 
 //            val vogelName: Editable = SpannableStringBuilder(name)
@@ -70,6 +72,7 @@ class DetailNesterFragment : Fragment() {
         }
         var adapter = DetailNestAdapter(listOf())
         binding.eierRv.adapter = adapter
+
         viewModel.eiData.observe(
             viewLifecycleOwner,
 

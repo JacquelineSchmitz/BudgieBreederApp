@@ -36,10 +36,22 @@ class DetailNestAdapter(
     }
 
     override fun onBindViewHolder(holder: DetailNestAdapter.ItemViewHolder, position: Int) {
-        val currentEi = dataset[position]
 
-        holder.binding.textInputGelegt.setText(currentEi.gelegt)
-        holder.binding.textInputGeschluepft.setText(currentEi.gelegt)
+
+            val currentEi = dataset[position]
+            /* var gelegt = holder.binding.textInputGelegt.text.toString()
+             var geschluepft = holder.binding.textInputGeschluepft.text.toString()*/
+
+
+            holder.binding.textInputGelegt.setText(currentEi.gelegt)
+            holder.binding.textInputGeschluepft.setText(currentEi.geschluepft)
+
+
+//        val currentEi = dataset[position]
+//
+//        holder.binding.textInputGelegt.setText(currentEi.gelegt)
+//        holder.binding.textInputGeschluepft.setText(currentEi.gelegt)
+
 //        val editableGelegt: Editable = SpannableStringBuilder(currentEi.gelegt)
 //        holder.binding.textInputGelegt.text = editableGelegt
 //
