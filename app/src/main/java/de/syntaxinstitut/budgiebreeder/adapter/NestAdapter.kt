@@ -43,9 +43,13 @@ class NestAdapter(
                 .navigate(NesterFragmentDirections.actionNesterFragmentToDetailNesterFragment(currentButton.id))
         }
 
-        holder.binding.imageButton2.setOnClickListener{
+        holder.binding.imageButtonLoeschen.setOnClickListener{
             handler(currentButton)
             notifyItemRemoved(position)
+        }
+        holder.binding.imageButton.setOnClickListener{
+            handler(currentButton)
+          //  notifyItem(position)
         }
 
     }

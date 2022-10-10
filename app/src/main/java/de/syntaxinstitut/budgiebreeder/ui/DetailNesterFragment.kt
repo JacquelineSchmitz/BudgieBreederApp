@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.room.Database
+import com.google.android.material.textfield.TextInputEditText
 import de.syntaxinstitut.budgiebreeder.MainViewModel
 import de.syntaxinstitut.budgiebreeder.R
 import de.syntaxinstitut.budgiebreeder.adapter.DetailNestAdapter
@@ -19,8 +21,7 @@ import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
 import de.syntaxinstitut.budgiebreeder.data.model.EiData
 import de.syntaxinstitut.budgiebreeder.databinding.FragmentDetailNesterBinding
 
-//todo detailnester einmal updaten, beim hinzufügen der daten ... hinzufügen zu den entsprechenden listen
-//todo auslesen der daten aus der liste und setzten dies auf edit text
+
 
 class DetailNesterFragment : Fragment() {
     private lateinit var binding: FragmentDetailNesterBinding
@@ -52,13 +53,26 @@ class DetailNesterFragment : Fragment() {
 
         var currentNest = viewModel.detailNest.value!!.find { it.id == nestId }
         binding.nameText.setText(currentNest!!.name)
+
+        var adapter = DetailNestAdapter(listOf())
+
         binding.buttonName.setOnClickListener {
 
             val name = binding.nameText.text.toString()
 
+            for (item in adapter.getDataSet()){
+//                val gelegt = item.gelegt
+//                val geschluepft = item.geschluepft
+                viewModel.updateEiData(item)
+            }
+
                 Log.d("test", "${name}")
                 currentNest!!.name = name
                 viewModel.updatedetailNest(currentNest)
+
+
+
+//            viewModel.insertEiData(EiData(gelegt = "22.04", geschluepft = "15.05", nestId = currentNest.id))
 
 
 //            val vogelName: Editable = SpannableStringBuilder(name)
@@ -67,10 +81,10 @@ class DetailNesterFragment : Fragment() {
         }
 
         binding.floatingActionButton2.setOnClickListener {
-            viewModel.insertEiData(EiData(gelegt = "22.04", geschluepft = "15.05", nestId = currentNest.id))
+            viewModel.insertEiData(EiData(gelegt = "", geschluepft = "", nestId = currentNest.id))
 
         }
-        var adapter = DetailNestAdapter(listOf())
+
         binding.eierRv.adapter = adapter
 
         viewModel.eiData.observe(

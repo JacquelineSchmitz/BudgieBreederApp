@@ -62,19 +62,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
 
-            <ImageButton
-                android:id="@+id/imageButtonSpeichern"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButtonLoeschen"
-                app:layout_constraintHorizontal_bias="0.022"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.466"
-                app:srcCompat="@drawable/ic_baseline_check_box_24" />
-
 
             <!-- <com.google.android.material.textfield.TextInputLayout
                      android:id="@+id/textInputLayoutGeschluepft"

@@ -83,11 +83,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
 
 
-//        fun updateEiData(eiData: EiData) {
-//            viewModelScope.launch {
-//                repository.updateEiData(eiData)
-//            }
-//        }
+        fun updateEiData(eiData: EiData) {
+            viewModelScope.launch {
+                repository.updateEiData(eiData)
+            }
+        }
     }
 
 

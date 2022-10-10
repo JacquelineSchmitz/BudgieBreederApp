@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class EiData (
         @PrimaryKey(autoGenerate = true)
         val id: Long = 0,
-        val gelegt: String,
-        val geschluepft: String,
+        var gelegt: String,
+        var geschluepft: String,
         val nestId: Long
         )
