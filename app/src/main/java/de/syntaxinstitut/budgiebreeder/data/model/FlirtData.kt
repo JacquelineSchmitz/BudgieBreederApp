@@ -8,6 +8,6 @@ import androidx.room.PrimaryKey
 data class FlirtData (
     @PrimaryKey (autoGenerate = true)
     val id : Long = 0,
-    val name1 : String,
-    val name2 : String
+    var name1 : String,
+    var name2 : String
         )

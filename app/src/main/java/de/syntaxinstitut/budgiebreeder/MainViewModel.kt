@@ -8,10 +8,7 @@ import de.syntaxinstitut.budgiebreeder.data.NestButtonDataSource
 import de.syntaxinstitut.budgiebreeder.data.Repository
 import de.syntaxinstitut.budgiebreeder.data.local.DetailNestDataBase
 import de.syntaxinstitut.budgiebreeder.data.local.getDatabase
-import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
-import de.syntaxinstitut.budgiebreeder.data.model.EiData
-import de.syntaxinstitut.budgiebreeder.data.model.NestButton
-import de.syntaxinstitut.budgiebreeder.data.model.PicData
+import de.syntaxinstitut.budgiebreeder.data.model.*
 import de.syntaxinstitut.budgiebreeder.data.remote.BudgieApi
 import kotlinx.coroutines.launch
 
@@ -28,16 +25,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val nest: LiveData<List<NestButton>>
         get() = _nest
 
+//    private val _flirt = MutableLiveData<List<FlirtData>>()
+//    val flirt: LiveData<List<FlirtData>>
+//        get() = _flirt
+
     val detailNest = repository.detailNestList
     val flirtData = repository.flirtDataList
     val eiData = repository.eitDataList
 
-    //private val _pic = MutableLiveData<List<PicData>>()
-    //val pic: LiveData<List<String>>
-    //get() = _pic
-
 
     val pics: LiveData<List<String>> = repository.pictureslist
+
+  //  val flirt: LiveData<List<String>> = repository.pictureslist
+
 
 
     init {
@@ -65,6 +65,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         }
 
+    fun insertFlirtData(flirtData: FlirtData) {
+        viewModelScope.launch {
+            repository.insertFlirt(flirtData)
+        }
+
+    }
+
         fun deleteNest(id: Long) {
             viewModelScope.launch {
                 repository.deleteDetailNest(id)
@@ -73,6 +80,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun deleteEi(id: Long) {
         viewModelScope.launch {
             repository.deleteEiData(id)
+        }
+    }
+    fun deleteFlirt(id: Long) {
+        viewModelScope.launch {
+            repository.deleteFlirtData(id)
         }
     }
 
@@ -88,6 +100,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 repository.updateEiData(eiData)
             }
         }
+
+    fun updateFlirtData(flirtData: FlirtData) {
+        viewModelScope.launch {
+            repository.updateFlirtData(flirtData)
+        }
+    }
     }
 
 

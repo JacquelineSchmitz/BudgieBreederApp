@@ -40,7 +40,7 @@ class FotoFragment: Fragment(R.layout.fragment_fotos) {
         viewModel.pics.observe(
             viewLifecycleOwner
         ) {
-            binding.fotosRv.adapter = PicAdapter(it)
+            binding.fotoRv.adapter = PicAdapter(it)
         }
     }
 }

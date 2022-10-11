@@ -80,24 +80,8 @@ class DetailNestAdapter(
             override fun afterTextChanged(p0: Editable?) {
 
             }
-
-
         })
 
-
-
-
-
-//        val currentEi = dataset[position]
-//
-//        holder.binding.textInputGelegt.setText(currentEi.gelegt)
-//        holder.binding.textInputGeschluepft.setText(currentEi.gelegt)
-
-//        val editableGelegt: Editable = SpannableStringBuilder(currentEi.gelegt)
-//        holder.binding.textInputGelegt.text = editableGelegt
-//
-//        val editableGeschluepft: Editable = SpannableStringBuilder(currentEi.geschluepft)
-//        holder.binding.textInputGeschluepft.text = editableGeschluepft
 
     }
 
