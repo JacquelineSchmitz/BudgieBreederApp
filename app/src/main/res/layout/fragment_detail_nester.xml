@@ -120,7 +120,7 @@
             tools:text="HanSolo PrinzessinLea" />
 
         <Button
-            android:id="@+id/buttonName"
+            android:id="@+id/buttonSpeichernFlirt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="205dp"
