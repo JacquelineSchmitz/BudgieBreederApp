@@ -204,7 +204,7 @@
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/logo_splash_screen" />
+             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

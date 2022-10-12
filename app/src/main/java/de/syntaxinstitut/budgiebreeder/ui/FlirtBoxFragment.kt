@@ -37,18 +37,28 @@ class FlirtBoxFragment : Fragment(R.layout.fragment_flirtbox) {
 
 
 
-        var adapter = FlirtAdapter(listOf())
+        var adapter = FlirtAdapter(listOf()){
+                flirtData -> handleFlirtData(flirtData)
+        }
 
         binding.floatingActionButton3.setOnClickListener {
             viewModel.insertFlirtData(FlirtData(name1 = "", name2 = ""))
 
 
-//            for (item in adapter.getDataSet()) {
-////                val name1 = item.flirtBox
-////                val name2 = item.flirtBox
-  //          viewModel.updateFlirtData(item)
-//            }
+            for (item in adapter.getDataSet()) {
+
+            viewModel.updateFlirtData(item)
+            }
         }
+
+        binding.buttonSpeichernFlirt.setOnClickListener{
+
+            for (item in adapter.getDataSet()) {
+
+                viewModel.updateFlirtData(item)
+            }
+        }
+
         binding.flirtRv.adapter = adapter
 
         viewModel.flirtData.observe(
@@ -57,7 +67,9 @@ class FlirtBoxFragment : Fragment(R.layout.fragment_flirtbox) {
         ) {
             Log.e("test", viewModel.flirtData.value.toString())
     // binding.flirtRv.adapter = FlirtAdapter(it)
-        adapter.submitList(it)
+        binding.flirtRv.adapter = FlirtAdapter(it){
+            flirtData -> handleFlirtData(flirtData)
+        }
         }
     }
     private fun handleFlirtData (flirtData: FlirtData) {

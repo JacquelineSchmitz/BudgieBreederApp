@@ -8,13 +8,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import de.syntaxinstitut.budgiebreeder.data.model.DetailNest
 import de.syntaxinstitut.budgiebreeder.data.model.EiData
 import de.syntaxinstitut.budgiebreeder.data.model.FlirtData
 import de.syntaxinstitut.budgiebreeder.databinding.ItemFlirtboxBinding
 import de.syntaxinstitut.budgiebreeder.ui.FlirtBoxFragment
 
 class FlirtAdapter(
-    private var dataset: List<FlirtData>
+    private var dataset: List<FlirtData>,
+    val handler: (FlirtData) -> Unit
+
 ) : RecyclerView.Adapter<FlirtAdapter.ItemViewHolder>() {
 
 
@@ -73,7 +76,13 @@ class FlirtAdapter(
         }
     })
 
+        holder.binding.imageButtonloeschen.setOnClickListener{
+            handler(currentFlirt)
+            notifyItemRemoved(position)
+        }
+
     }
+
 
     override fun getItemCount(): Int {
         return dataset.size
