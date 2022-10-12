@@ -58,6 +58,7 @@ class NesterFragment : Fragment(R.layout.fragment_nester) {
     }
 
     private fun handleUserData(nestData: DetailNest) {
+
         viewModel.deleteNest(nestData.id)
     }
 

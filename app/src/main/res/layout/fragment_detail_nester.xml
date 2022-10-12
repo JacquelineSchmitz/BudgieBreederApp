@@ -100,7 +100,10 @@
                     app:backgroundTint="@color/teal_700"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/logo_splash_screen" />
+                    app:tint="@null"
+                    app:srcCompat="@drawable/logo_splash_screen"
+                    android:scaleType="center"
+                    app:maxImageSize="60dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

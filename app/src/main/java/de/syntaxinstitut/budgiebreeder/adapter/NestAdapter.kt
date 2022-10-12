@@ -47,10 +47,10 @@ class NestAdapter(
             handler(currentButton)
             notifyItemRemoved(position)
         }
-        holder.binding.imageButton.setOnClickListener{
-            handler(currentButton)
-          //  notifyItem(position)
-        }
+//        holder.binding.imageButton.setOnClickListener{
+//            handler(currentButton)
+//          //  notifyItem(position)
+//        }
 
     }
 
