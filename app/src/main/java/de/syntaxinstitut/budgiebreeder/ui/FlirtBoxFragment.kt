@@ -18,15 +18,8 @@ import de.syntaxinstitut.budgiebreeder.databinding.FragmentFlirtboxBinding
 class FlirtBoxFragment : Fragment(R.layout.fragment_flirtbox) {
     private lateinit var binding: FragmentFlirtboxBinding
     private val viewModel: MainViewModel by activityViewModels()
-    private var flirtId: Long = 0
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            flirtId = it.getLong("id")
-        }
-    }
 
 
     override fun onCreateView(
@@ -42,11 +35,7 @@ class FlirtBoxFragment : Fragment(R.layout.fragment_flirtbox) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("flirtId:", viewModel.detailNest.value.toString())
-        var currentFlirt = viewModel.flirtData.value!!.find { it.id == flirtId }
 
-        // binding.flirtRv.
-        // binding.textInputName2.setText(currentFlirt!!.value)
 
         var adapter = FlirtAdapter(listOf())
 
@@ -54,11 +43,11 @@ class FlirtBoxFragment : Fragment(R.layout.fragment_flirtbox) {
             viewModel.insertFlirtData(FlirtData(name1 = "", name2 = ""))
 
 
-            for (item in adapter.getDataSet()) {
-//                val name1 = item.flirtBox
-//                val name2 = item.flirtBox
-                viewModel.updateFlirtData(item)
-            }
+//            for (item in adapter.getDataSet()) {
+////                val name1 = item.flirtBox
+////                val name2 = item.flirtBox
+  //          viewModel.updateFlirtData(item)
+//            }
         }
         binding.flirtRv.adapter = adapter
 
@@ -67,21 +56,10 @@ class FlirtBoxFragment : Fragment(R.layout.fragment_flirtbox) {
 
         ) {
             Log.e("test", viewModel.flirtData.value.toString())
-            var flirtListe = mutableListOf<FlirtData>()
-            for (flirt in it) {
-                if (currentFlirt != null) {
-                    if (
-                        flirt.id == currentFlirt.id
-                    ) {
-                        flirtListe.add(flirt)
-                    }
-                }
-            }
-            adapter.submitList(flirtListe)
+    // binding.flirtRv.adapter = FlirtAdapter(it)
+        adapter.submitList(it)
         }
-
-
-        }
+    }
     private fun handleFlirtData (flirtData: FlirtData) {
         viewModel.deleteFlirt(flirtData.id)
     }

@@ -28,12 +28,10 @@ class DetailNestAdapter(
         notifyDataSetChanged()
     }
 
-    inner class ItemViewHolder(val binding: ItemEiBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class ItemViewHolder(val binding: ItemEiBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): DetailNestAdapter.ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DetailNestAdapter.ItemViewHolder {
         val binding = ItemEiBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
@@ -44,8 +42,6 @@ class DetailNestAdapter(
 
 
             val currentEi = dataset[position]
-            /* var gelegt = holder.binding.textInputGelegt.text.toString()
-             var geschluepft = holder.binding.textInputGeschluepft.text.toString()*/
 
 
             holder.binding.textInputGelegt.setText(currentEi.gelegt)

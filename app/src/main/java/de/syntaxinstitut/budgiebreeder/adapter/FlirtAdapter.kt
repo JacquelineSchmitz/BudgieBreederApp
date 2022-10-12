@@ -27,16 +27,18 @@ class FlirtAdapter(
     inner class ItemViewHolder(val binding: ItemFlirtboxBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlirtAdapter.ItemViewHolder {
         val binding = ItemFlirtboxBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return ItemViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FlirtAdapter.ItemViewHolder,@SuppressLint("RecyclerView") position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
         val currentFlirt = dataset[position]
+
+        println("id: = $currentFlirt.id")
 
         holder.binding.textInputName.setText(currentFlirt.name1)
         holder.binding.textInputName.inputType = InputType.TYPE_CLASS_TEXT
@@ -49,7 +51,7 @@ class FlirtAdapter(
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                dataset[position].name1 = p0.toString()
+                currentFlirt.name1 = p0.toString()
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -63,7 +65,7 @@ class FlirtAdapter(
         }
 
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            dataset[position].name2 = p0.toString()
+            currentFlirt.name2 = p0.toString()
         }
 
         override fun afterTextChanged(p0: Editable?) {

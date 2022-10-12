@@ -21,13 +21,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = Repository(BudgieApi, dataBase)
 
-    private val _nest = MutableLiveData<List<NestButton>>()
-    val nest: LiveData<List<NestButton>>
-        get() = _nest
 
-//    private val _flirt = MutableLiveData<List<FlirtData>>()
-//    val flirt: LiveData<List<FlirtData>>
-//        get() = _flirt
 
     val detailNest = repository.detailNestList
     val flirtData = repository.flirtDataList
@@ -36,13 +30,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     val pics: LiveData<List<String>> = repository.pictureslist
 
-  //  val flirt: LiveData<List<String>> = repository.pictureslist
-
 
 
     init {
-        // _nest.value = nestButtonDataSource.loadNestButton()
-        // _pic.value = picDataSource.loadPictures()
+
         loadData()
     }
 

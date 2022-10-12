@@ -97,15 +97,4 @@ class Repository(private val budgieApi: BudgieApi, private val dataBase: DetailN
         }
     }
 
-//    suspend fun getEiData(): String {
-//        var eiData : String = ""
-//        try {
-//            eiData = dataBase.detailNestDataBaseDao.()
-//        } catch (e: Exception) {
-//            Log.e("Repository", "Failed to insert into database: $e")
-//        }
-//        return eiData
-//    }
-
-
 }
