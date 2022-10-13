@@ -62,19 +62,19 @@ class FlirtAdapter(
             }
         })
 
-    holder.binding.textInputName2.addTextChangedListener(object : TextWatcher{
-        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        holder.binding.textInputName2.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
-        }
+            }
 
-        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            currentFlirt.name2 = p0.toString()
-        }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                currentFlirt.name2 = p0.toString()
+            }
 
-        override fun afterTextChanged(p0: Editable?) {
+            override fun afterTextChanged(p0: Editable?) {
 
-        }
-    })
+            }
+        })
 
         holder.binding.imageButtonloeschen.setOnClickListener{
             handler(currentFlirt)

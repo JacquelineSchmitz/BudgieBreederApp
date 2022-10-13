@@ -54,7 +54,9 @@ class DetailNesterFragment : Fragment() {
         var currentNest = viewModel.detailNest.value!!.find { it.id == nestId }
         binding.nameText.setText(currentNest!!.name)
 
-        var adapter = DetailNestAdapter(listOf())
+        var adapter = DetailNestAdapter(listOf()){ eiData -> handleUserData(eiData)
+        }
+
 
         binding.buttonName.setOnClickListener {
 
@@ -85,6 +87,15 @@ class DetailNesterFragment : Fragment() {
 
         }
 
+        viewModel.eiData.observe(
+            viewLifecycleOwner,
+            Observer {
+                binding.eierRv.adapter = DetailNestAdapter(it){ eiData -> handleUserData(eiData)
+
+                }
+            }
+        )
+
         binding.eierRv.adapter = adapter
 
         viewModel.eiData.observe(
@@ -110,8 +121,17 @@ class DetailNesterFragment : Fragment() {
 
     }
 
-    private fun handleEiData(eiData: EiData) {
-        viewModel.deleteEi(eiData.id)
+//    private fun handleEiData(eiData: EiData) {
+//        for (ei in viewModel.) {
+//            if ( ei.nestId == nestId) {
+//                viewModel.deleteEi(eiData.id)
+//
+//            }
+//    }
+        private fun handleUserData(eiData: EiData) {
+
+            viewModel.deleteEi(eiData.id)
+        }
+
     }
-}
 

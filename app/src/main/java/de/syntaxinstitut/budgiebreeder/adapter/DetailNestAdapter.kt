@@ -17,10 +17,11 @@ import de.syntaxinstitut.budgiebreeder.ui.NesterFragmentDirections
 
 
 class DetailNestAdapter(
-     var dataset: List<EiData>
+     var dataset: List<EiData>,
+     val handler: (EiData) -> Unit
 ) : RecyclerView.Adapter<DetailNestAdapter.ItemViewHolder>() {
 
-    // val handler: (EiData) -> Unit
+
 
     @SuppressLint("NotifyDataSetChanged")
     fun submitList(list: List<EiData>) {
@@ -34,12 +35,23 @@ class DetailNestAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DetailNestAdapter.ItemViewHolder {
         val binding = ItemEiBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
+
         )
+
+
+
         return ItemViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: DetailNestAdapter.ItemViewHolder, @SuppressLint("RecyclerView") position: Int) {
 
+
+
+        val currentButton = dataset[position]
+        holder.binding.imageButtonLoeschen.setOnClickListener{
+            handler(currentButton)
+            notifyItemRemoved(position)
+        }
 
             val currentEi = dataset[position]
 
@@ -90,5 +102,6 @@ class DetailNestAdapter(
     fun getDataSet(): List<EiData> {
         return dataset
     }
+
 }
 
