@@ -47,13 +47,13 @@ class DetailNestAdapter(
 
 
 
-        val currentButton = dataset[position]
+        val currentEi = dataset[position]
         holder.binding.imageButtonLoeschen.setOnClickListener{
-            handler(currentButton)
+            handler(currentEi)
             notifyItemRemoved(position)
         }
 
-            val currentEi = dataset[position]
+
 
 
             holder.binding.textInputGelegt.setText(currentEi.gelegt)
