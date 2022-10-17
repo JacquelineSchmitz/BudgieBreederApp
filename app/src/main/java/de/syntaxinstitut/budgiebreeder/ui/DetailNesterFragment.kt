@@ -63,6 +63,7 @@ class DetailNesterFragment : Fragment() {
             val name = binding.nameText.text.toString()
 
             for (item in adapter.getDataSet()){
+                Log.d("eiData:", item.gelegt)
 //                val gelegt = item.gelegt
 //                val geschluepft = item.geschluepft
                 viewModel.updateEiData(item)
@@ -87,14 +88,14 @@ class DetailNesterFragment : Fragment() {
 
         }
 
-        viewModel.eiData.observe(
-            viewLifecycleOwner,
-            Observer {
-                binding.eierRv.adapter = DetailNestAdapter(it){ eiData -> handleUserData(eiData)
-
-                }
-            }
-        )
+//        viewModel.eiData.observe(
+//            viewLifecycleOwner,
+//            Observer {
+//                binding.eierRv.adapter = DetailNestAdapter(it){ eiData -> handleUserData(eiData)
+//
+//                }
+//            }
+//        )
 
         binding.eierRv.adapter = adapter
 
@@ -112,10 +113,9 @@ class DetailNesterFragment : Fragment() {
                     }
                 }
                 adapter.submitList(eierListe)
-//                binding.eierRv.adapter = DetailNestAdapter(viewModel.eiData.value!!) { eiData ->
-//                    handleEiData(eiData)
-//
-//                }
+                binding.eierRv.adapter = adapter
+
+
             }
         )
 
